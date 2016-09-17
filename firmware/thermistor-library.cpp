@@ -61,7 +61,7 @@ float Thermistor::getTempF(bool smooth) {
 	_temp_f = (_temp_c * 9.0)/ 5.0 + 32.0;
 
 	Serial.print("Temp F: ");
-	Serial.println(_temp_f;
+	Serial.println(_temp_f);
 	
 	return _temp_f;
 }
