@@ -36,6 +36,9 @@ float Thermistor::getTempK(bool smooth) {
 	_temp_k = log(((40960000/_temp_raw) - _resistor));
 	_temp_k = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * _temp_k * _temp_k ))* _temp_k);
 	
+	Serial.print("Temp K: ");
+	Serial.println(_temp_k);
+	
 	return _temp_k;
 }
 
