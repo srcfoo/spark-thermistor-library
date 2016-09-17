@@ -25,6 +25,9 @@ int Thermistor::getTempRaw(bool smooth) {
 		_temp_raw = total/100;
 	} else
 		_temp_raw = analogRead(_pin);
+		
+	Serial.print("Temp K: ");
+	Serial.println(_temp_k);
 
 	return _temp_raw;
 }
